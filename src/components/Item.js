@@ -5,7 +5,7 @@ function Item({ name, category }) {
 
   function handleClick() {
     if (buttonText == "Add to Cart") {
-      setButtonText("Remove to cart");
+      setButtonText("Remove From Cart");
     } else {
       setButtonText("Add to Cart");
     }

@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
+import Filter from "./Filter";
 import Item from "./Item";
 
 function ShoppingList({ items }) {
@@ -28,14 +29,15 @@ function ShoppingList({ items }) {
 
   return (
     <div className="ShoppingList">
-      <div className="Filter">
+      <Filter handleCategoryChange={handleCategoryChange} />
+      {/* <div className="Filter">
         <select name="filter" onChange={handleCategoryChange}>
           <option value="All">Filter by category</option>
           <option value="Produce">Produce</option>
           <option value="Dairy">Dairy</option>
           <option value="Dessert">Dessert</option>
         </select>
-      </div>
+      </div> */}
       <ul className="Items">
         {filteredList.map((element, index) => (
           <Item {...element} key={index} />
